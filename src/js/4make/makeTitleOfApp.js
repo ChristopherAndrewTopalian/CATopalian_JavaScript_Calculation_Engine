@@ -7,9 +7,9 @@ function makeTitleOfApp()
     titleOfApplication.style.right = '15px';
     titleOfApplication.style.bottom = '5px';
     titleOfApplication.style.fontSize = '17px';
-    titleOfApplication.style.color = 'rgb(70, 70, 70)';
+    titleOfApplication.style.color = 'rgb(100, 100, 100)';
     titleOfApplication.style.fontWeight = 'bold';
-    titleOfApplication.href = 'https://github.com/ChristopherTopalian'
+    titleOfApplication.href = 'https://github.com/ChristopherAndrewTopalian/Topalian_JavaScript_Calculation_Engine'
     titleOfApplication.target = '_blank';
     titleOfApplication.textContent = ' Topalian JavaScript Calculation Engine';
     ba(titleOfApplication);
