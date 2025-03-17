@@ -11,7 +11,7 @@ function makeTitleOfApp()
     titleOfApplication.style.fontWeight = 'bold';
     titleOfApplication.href = 'https://github.com/ChristopherAndrewTopalian/Topalian_JavaScript_Calculation_Engine'
     titleOfApplication.target = '_blank';
-    titleOfApplication.textContent = ' Topalian JavaScript Calculation Engine';
+    titleOfApplication.textContent = ' CATopalian JavaScript Calculation Engine';
     ba(titleOfApplication);
 }
 
