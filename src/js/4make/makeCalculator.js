@@ -18,7 +18,8 @@ function makeCalculator(whichItem, whichAmount)
     let mainDiv = ce("div");
     mainDiv.id = calculatorId;
     mainDiv.style.position = 'relative';
-    mainDiv.style.top = '10vh';
+    mainDiv.style.top = '0vh';
+    mainDiv.style.left = 275 + 'px';
     mainDiv.style.width = '25vw';
     mainDiv.style.paddingLeft = '12px';
     mainDiv.style.paddingRight = '12px';
@@ -31,7 +32,6 @@ function makeCalculator(whichItem, whichAmount)
     mainDiv.style.display = 'flex';
     mainDiv.style.flexDirection = 'column';
     mainDiv.style.alignItems = 'center';
-    mainDiv.style.margin = 'auto';
     ba(mainDiv);
 
     //-//
@@ -156,42 +156,44 @@ function makeCalculator(whichItem, whichAmount)
     //-//
 
     if (ge("dataContainer"))
-    {
-        ge("dataContainer").remove();
-    }
-
-    let dataContainer = ce('div');
-    dataContainer.id = 'dataContainer';
-    dataContainer.style.position = 'absolute';
-    dataContainer.style.right = '70px';
-    dataContainer.style.top = '40px';
-    dataContainer.style.width = '200px';
-    dataContainer.style.display = 'flex';
-    dataContainer.style.flexDirection = 'column';
-    ba(dataContainer);
-
-    //-//
-
-    let formulaText = ce("div");
-    formulaText.id = "formulaText";
-    formulaText.style.fontSize = '19px';
-    formulaText.style.fontWeight = 'bold';
-    formulaText.style.color = 'rgb(0, 255, 255)';
-    formulaText.innerHTML = calculationData[whichItem].formula;
-    dataContainer.append(formulaText);
-
-    //-//
-
-    dataContainer.append(ce('hr'));
-
-    //-//
-
-    let expressionText = ce("div");
-    expressionText.id = 'expressionText';
-    expressionText.style.fontSize = '19px';
-    expressionText.style.fontWeight = 'bold';
-    expressionText.innerHTML = calculationData[whichItem].expression;
-    dataContainer.append(expressionText);
+        {
+            ge("dataContainer").remove();
+        }
+    
+        let dataContainer = ce('div');
+        dataContainer.id = 'dataContainer';
+        dataContainer.style.position = 'absolute';
+        dataContainer.style.right = '50px';
+        dataContainer.style.bottom = '25px';
+        dataContainer.style.width = '300px';
+        dataContainer.style.display = 'flex';
+        dataContainer.style.flexDirection = 'column';
+        //ge('menuMainDiv').insertAdjacentElement('beforeend', dataContainer);
+        ba(dataContainer);
+    
+        //-//
+    
+        let formulaText = ce("div");
+        formulaText.id = "formulaText";
+        formulaText.style.fontSize = '19px';
+        formulaText.style.fontWeight = 'bold';
+        formulaText.style.color = 'rgb(0, 255, 255)';
+        formulaText.innerHTML = calculationData[whichItem].formula;
+        dataContainer.append(formulaText);
+    
+        //-//
+    
+        dataContainer.append(ce('hr'));
+    
+        //-//
+    
+        let expressionText = ce("div");
+        expressionText.id = 'expressionText';
+        expressionText.style.fontSize = '19px';
+        expressionText.style.fontWeight = 'bold';
+        expressionText.innerHTML = calculationData[whichItem].expression;
+        dataContainer.append(expressionText);
+    
 }
 
 //----//

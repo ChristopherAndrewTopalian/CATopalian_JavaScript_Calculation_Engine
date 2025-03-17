@@ -32,31 +32,31 @@ function playTone(frequency, duration, waveType, volume, detune, attackTime, rel
     oscillator.stop(audioCtx.currentTime + duration / 1000);
 }
 
-function hoverSound()
-{
-    playTone(
-        300,     // frequency
-        500,     // duration
-        'sine',  // waveType
-        0.15,    // volume
-        50,       // detune
-        0.2,      // attackTime
-        0.2,      // releaseTime
-        -0.5      // panValue -0.5 is left
-    );
-}
-
 function clickSound()
 {
     playTone(
-        400,     // frequency
-        500,     // duration
+        200,     // frequency
+        200,     // duration
         'sine',  // waveType
-        0.15,    // volume
-        50,       // detune
-        0.2,      // attackTime
-        0.2,      // releaseTime
-        -0.5      // panValue -0.5 is left
+        0.05,    // volume
+        0,       // detune
+        0.05,      // attackTime
+        0.1,      // releaseTime
+        0.0      // panValue -0.5 is left
+    );
+}
+
+function hoverSound()
+{
+    playTone(
+        250,     // frequency
+        250,     // duration
+        'sine',  // waveType
+        0.05,    // volume
+        0,       // detune
+        0.03,      // attackTime
+        0.05,      // releaseTime
+        0.0      // panValue -0.5 is left
     );
 }
 
