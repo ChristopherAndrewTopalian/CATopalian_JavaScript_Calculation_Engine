@@ -7,4 +7,6 @@ A JavaScript calculation engine that is easy to comprehend and well organized
 
 USE APP: https://christopherandrewtopalian.github.io/CATopalian_JavaScript_Calculation_Engine/CATopalian_JavaScript_Calculation_Engine.html
 
-https://github.com/ChristopherAndrewTopalian/Topalian_JavaScript_Calculation_Engine
+---
+
+CODE: https://github.com/ChristopherAndrewTopalian/Topalian_JavaScript_Calculation_Engine
