@@ -57,7 +57,7 @@ function makeMenu()
     maximizeButton.onclick = function()
     {
         clickSound();
-        ge("menuSubDiv").style.height = 300 + "px";
+        ge("menuSubDiv").style.height = 290 + "px";
     };
     menuMainDiv.append(maximizeButton);
 

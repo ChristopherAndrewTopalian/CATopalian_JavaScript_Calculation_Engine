@@ -5,8 +5,8 @@ function makeTitleOfApp()
     let titleOfApplication = ce("a");
     titleOfApplication.style.position = 'absolute';
     titleOfApplication.style.right = '15px';
-    titleOfApplication.style.bottom = '5px';
-    titleOfApplication.style.fontSize = '17px';
+    titleOfApplication.style.top = '5px';
+    titleOfApplication.style.fontSize = '15px';
     titleOfApplication.style.color = 'rgb(100, 100, 100)';
     titleOfApplication.style.fontWeight = 'bold';
     titleOfApplication.href = 'https://github.com/ChristopherAndrewTopalian/Topalian_JavaScript_Calculation_Engine'
