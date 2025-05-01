@@ -37,6 +37,4 @@ function ct(whichText)
 // https://github.com/ChristopherTopalian
 // https://github.com/ChristopherAndrewTopalian
 // https://sites.google.com/view/CollegeOfScripting
-// College of Scripting Music & Science
-// Send Donations to paypal.me/keystonermarch
 
