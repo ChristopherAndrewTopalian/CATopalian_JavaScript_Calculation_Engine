@@ -28,7 +28,7 @@ function makeMenu()
     minimizeButton.style.position = "absolute";
     minimizeButton.style.left = 0 + "px";
     minimizeButton.style.top = -22 + "px";
-    minimizeButton.innerHTML = "_";
+    minimizeButton.textContent = "_";
     minimizeButton.onmouseover = function()
     {
         hoverSound();
@@ -49,7 +49,7 @@ function makeMenu()
     maximizeButton.style.position = "absolute";
     maximizeButton.style.left = 30 + "px";
     maximizeButton.style.top = -22 + "px";
-    maximizeButton.innerHTML = "□";
+    maximizeButton.textContent = "□";
     maximizeButton.onmouseover = function()
     {
         hoverSound();
