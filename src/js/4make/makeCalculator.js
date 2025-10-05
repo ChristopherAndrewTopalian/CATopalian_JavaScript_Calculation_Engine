@@ -90,39 +90,39 @@ function makeCalculator(whichItem, whichAmount)
     if (whichAmount == 1)
     {
         let titleOfTextBox1 = ce("div");
-        titleOfTextBox1.innerHTML = calculationData[whichItem].textBoxOne;
+        titleOfTextBox1.textContent = calculationData[whichItem].textBoxOne;
         mainDiv.insertBefore(titleOfTextBox1, ge(0));
     }
 
     if (whichAmount == 2)
     {
         let titleOfTextBox1 = ce("div");
-        titleOfTextBox1.innerHTML = calculationData[whichItem].textBoxOne;
+        titleOfTextBox1.textContent = calculationData[whichItem].textBoxOne;
         mainDiv.insertBefore(titleOfTextBox1, ge(1));
 
         //-//
 
         let titleOfTextBox2 = ce("div");
-        titleOfTextBox2.innerHTML = calculationData[whichItem].textBoxTwo;
+        titleOfTextBox2.textContent = calculationData[whichItem].textBoxTwo;
         mainDiv.insertBefore(titleOfTextBox2, ge(2));
     }
 
     if (whichAmount == 3)
     {
         let titleOfTextBox1 = ce("div");
-        titleOfTextBox1.innerHTML = calculationData[whichItem].textBoxOne;
+        titleOfTextBox1.textContent = calculationData[whichItem].textBoxOne;
         mainDiv.insertBefore(titleOfTextBox1, ge(1));
 
         //-//
 
         let titleOfTextBox2 = ce("div");
-        titleOfTextBox2.innerHTML = calculationData[whichItem].textBoxTwo;
+        titleOfTextBox2.textContent = calculationData[whichItem].textBoxTwo;
         mainDiv.insertBefore(titleOfTextBox2, ge(2));
 
         //-//
 
         let titleOfTextBox3 = ce("div");
-        titleOfTextBox3.innerHTML = calculationData[whichItem].textBoxThree;
+        titleOfTextBox3.textContent = calculationData[whichItem].textBoxThree;
         mainDiv.insertBefore(titleOfTextBox3, ge(4));
     }
 
@@ -148,7 +148,7 @@ function makeCalculator(whichItem, whichAmount)
     let titleOfTextBoxResult = ce("div");
     titleOfTextBoxResult.style.color = 'rgb(0, 255, 255)';
     titleOfTextBoxResult.style.fontWeight = 'bold';
-    titleOfTextBoxResult.innerHTML = ' '+calculationData[whichItem].textBoxResult+' ';
+    titleOfTextBoxResult.textContent = ' '+calculationData[whichItem].textBoxResult+' ';
     titleOfTextBoxResult.style.fontSize = '16px';
     mainDiv.append(titleOfTextBoxResult);
 
@@ -177,7 +177,7 @@ function makeCalculator(whichItem, whichAmount)
         formulaText.style.fontSize = '16px';
         formulaText.style.fontWeight = 'bold';
         formulaText.style.color = 'rgb(0, 255, 255)';
-        formulaText.innerHTML = calculationData[whichItem].formula;
+        formulaText.textContent = calculationData[whichItem].formula;
         dataContainer.append(formulaText);
     
         //-//
@@ -190,7 +190,7 @@ function makeCalculator(whichItem, whichAmount)
         expressionText.id = 'expressionText';
         expressionText.style.fontSize = '16px';
         expressionText.style.fontWeight = 'bold';
-        expressionText.innerHTML = calculationData[whichItem].expression;
+        expressionText.textContent = calculationData[whichItem].expression;
         dataContainer.append(expressionText);
 }
 
