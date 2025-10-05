@@ -98,12 +98,14 @@ function makeCalculator(whichItem, whichAmount)
     {
         let titleOfTextBox1 = ce("div");
         titleOfTextBox1.textContent = calculationData[whichItem].textBoxOne;
+        titleOfTextBox1.style.fontSize = '17px';
         mainDiv.insertBefore(titleOfTextBox1, ge(1));
 
         //-//
 
         let titleOfTextBox2 = ce("div");
         titleOfTextBox2.textContent = calculationData[whichItem].textBoxTwo;
+        titleOfTextBox2.style.fontSize = '17px';
         mainDiv.insertBefore(titleOfTextBox2, ge(2));
     }
 
@@ -117,12 +119,14 @@ function makeCalculator(whichItem, whichAmount)
 
         let titleOfTextBox2 = ce("div");
         titleOfTextBox2.textContent = calculationData[whichItem].textBoxTwo;
+        titleOfTextBox2.style.fontSize = '12px';
         mainDiv.insertBefore(titleOfTextBox2, ge(2));
 
         //-//
 
         let titleOfTextBox3 = ce("div");
         titleOfTextBox3.textContent = calculationData[whichItem].textBoxThree;
+        titleOfTextBox3.style.fontSize = '14px';
         mainDiv.insertBefore(titleOfTextBox3, ge(4));
     }
 
