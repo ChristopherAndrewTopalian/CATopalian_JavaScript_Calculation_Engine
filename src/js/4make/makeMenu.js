@@ -64,13 +64,14 @@ function makeMenu()
     //-//
 
     let menuSubDiv = ce("div");
-    menuSubDiv.style.minWidth = '270px';
+    menuSubDiv.style.minWidth = '240px';
     menuSubDiv.style.marginLeft = 'auto';
     menuSubDiv.style.marginRight = 'auto';
     menuSubDiv.style.float = 'left';
-    menuSubDiv.style.overflowY = 'auto';
+    menuSubDiv.style.overflow = 'scroll';
     menuSubDiv.style.resize = 'both';  menuSubDiv.id = "menuSubDiv";
-    menuSubDiv.innerHTML = "<br>";
+    menuSubDiv.style.display = 'flex';
+    menuSubDiv.style.flexDirection = 'column';
     menuMainDiv.append(menuSubDiv);
 
     //-//
@@ -78,10 +79,8 @@ function makeMenu()
     for (let x = 0; x < calculationData.length; x++)
     {
         let functionButton = ce("button");
-        functionButton.style.display = "flex";
-        functionButton.style.flexDirection = "row";
-        
-        functionButton.innerHTML = calculationData[x].name;
+        functionButton.style.alignSelf = 'flex-start';
+        functionButton.textContent = calculationData[x].name;
 
         functionButton.id = calculationData[x].name;
 

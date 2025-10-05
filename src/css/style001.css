@@ -61,7 +61,10 @@ a:visited
 
 button
 {
-    padding: 9px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     margin: 1px;
     border-style: solid;
     border-width: 1px;
@@ -72,8 +75,8 @@ button
     font-size: 12px;
     font-weight: bold;
     color: rgb(247, 247, 247);
-    text-align: center;
-    line-height: 0px;
+    /*text-align: center;*/
+    /*line-height: 0px;*/
     cursor: pointer;
 }
 
@@ -96,6 +99,4 @@ button:active
 /* https://github.com/ChristopherTopalian */
 /* https://github.com/ChristopherAndrewTopalian */
 /* https://sites.google.com/view/CollegeOfScripting */
-/* College of Scripting Music & Science */
-/* Donations paypal.me/keystonermarch */
 

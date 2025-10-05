@@ -35,12 +35,12 @@ function playTone(frequency, duration, waveType, volume, detune, attackTime, rel
 function clickSound()
 {
     playTone(
-        200,     // frequency
-        200,     // duration
+        500,     // frequency
+        100,     // duration
         'sine',  // waveType
-        0.05,    // volume
+        0.01,    // volume
         0,       // detune
-        0.05,      // attackTime
+        0.01,      // attackTime
         0.1,      // releaseTime
         0.0      // panValue -0.5 is left
     );
@@ -49,13 +49,13 @@ function clickSound()
 function hoverSound()
 {
     playTone(
-        250,     // frequency
-        250,     // duration
+        100,     // frequency
+        100,     // duration
         'sine',  // waveType
-        0.05,    // volume
+        0.03,    // volume
         0,       // detune
-        0.03,      // attackTime
-        0.05,      // releaseTime
+        0.01,      // attackTime
+        0.01,      // releaseTime
         0.0      // panValue -0.5 is left
     );
 }

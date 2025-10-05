@@ -19,7 +19,7 @@ function makeCalculator(whichItem, whichAmount)
     mainDiv.id = calculatorId;
     mainDiv.style.position = 'relative';
     mainDiv.style.top = '0vh';
-    mainDiv.style.left = 275 + 'px';
+    mainDiv.style.left = 250 + 'px';
     mainDiv.style.width = '25vw';
     mainDiv.style.paddingLeft = '12px';
     mainDiv.style.paddingRight = '12px';
@@ -37,11 +37,10 @@ function makeCalculator(whichItem, whichAmount)
     //-//
 
     let titleOfCalculator = ce("div");
-    titleOfCalculator.style.fontSize = '22px';
+    titleOfCalculator.style.fontSize = '17px';
     titleOfCalculator.style.fontWeight = 'bold';
     titleOfCalculator.style.color = 'rgb(0, 255, 255)';
-    titleOfCalculator.innerHTML = '<center> '+calculationData[whichItem].name+' </center>';
-    titleOfCalculator.innerHTML += "<br>";
+    titleOfCalculator.textContent = calculationData[whichItem].name;
     mainDiv.append(titleOfCalculator);
 
     //-//
@@ -163,9 +162,9 @@ function makeCalculator(whichItem, whichAmount)
         let dataContainer = ce('div');
         dataContainer.id = 'dataContainer';
         dataContainer.style.position = 'absolute';
-        dataContainer.style.right = '50px';
-        dataContainer.style.bottom = '25px';
-        dataContainer.style.width = '300px';
+        dataContainer.style.right = '0px';
+        dataContainer.style.bottom = '10px';
+        dataContainer.style.width = '250px';
         dataContainer.style.display = 'flex';
         dataContainer.style.flexDirection = 'column';
         //ge('menuMainDiv').insertAdjacentElement('beforeend', dataContainer);
@@ -175,7 +174,7 @@ function makeCalculator(whichItem, whichAmount)
     
         let formulaText = ce("div");
         formulaText.id = "formulaText";
-        formulaText.style.fontSize = '19px';
+        formulaText.style.fontSize = '16px';
         formulaText.style.fontWeight = 'bold';
         formulaText.style.color = 'rgb(0, 255, 255)';
         formulaText.innerHTML = calculationData[whichItem].formula;
@@ -189,11 +188,10 @@ function makeCalculator(whichItem, whichAmount)
     
         let expressionText = ce("div");
         expressionText.id = 'expressionText';
-        expressionText.style.fontSize = '19px';
+        expressionText.style.fontSize = '16px';
         expressionText.style.fontWeight = 'bold';
         expressionText.innerHTML = calculationData[whichItem].expression;
         dataContainer.append(expressionText);
-    
 }
 
 //----//
