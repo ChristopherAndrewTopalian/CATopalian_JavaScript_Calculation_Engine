@@ -1,6 +1,15 @@
 # CATopalian JavaScript Calculation Engine
 A JavaScript calculation engine that is easy to comprehend and well organized
 
+---
+
+## IMPORTANT NOTE:
+This is the eval version and should NOT be used online!  
+
+For the online version, we will be postin the link soon to the safe online version.
+
+---
+
 ![screenshot_001](src/media/textures/screenshots/screenshot_001.PNG)  
 
 USE APP: https://christopherandrewtopalian.github.io/CATopalian_JavaScript_Calculation_Engine/CATopalian_JavaScript_Calculation_Engine.html
