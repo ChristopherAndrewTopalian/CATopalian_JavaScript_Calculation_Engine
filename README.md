@@ -6,7 +6,7 @@ A JavaScript calculation engine that is easy to comprehend and well organized
 ## IMPORTANT NOTE:
 This is the eval version and should NOT be used online!  
 
-For the online version, we will be postin the link soon to the safe online version.
+For the online version, we will be posting the link soon to the safe online version.
 
 ---
 
