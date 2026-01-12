@@ -37,16 +37,26 @@ function calculateDivision(a, b)
 
 function calculateModulo(a, b)
 {
-    let remainder = a % b;
+    let remainder = parseFloat(a) % parseFloat(b);
 
     return remainder;
 }
 
 function calculatePercent(whichValue, whichTotalValue)
 {
-    let percent = (whichValue / whichTotalValue) * 100;
+    let val = parseFloat(whichValue);
+    let total = parseFloat(whichTotalValue);
 
-    return percent;
+    // Prevent division by zero
+    if (total === 0) 
+    {
+        return 0; 
+    }
+
+    let percent = (val / total) * 100;
+
+    // round to 2 decimal places (returns a string like "22.33")
+    return percent.toFixed(2); 
 }
 
 function calculateRectangleArea(a, b)
@@ -58,7 +68,7 @@ function calculateRectangleArea(a, b)
 
 function calculateSquareArea(a)
 {
-    let area = a * a;
+    let area = parseFloat(a) * parseFloat(a);
 
     return area;
 }
