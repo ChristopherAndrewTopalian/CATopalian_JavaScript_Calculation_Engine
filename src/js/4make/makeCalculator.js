@@ -37,8 +37,7 @@ function makeCalculator(whichItem)
 
     //-//
 
-    // THE MATH ENGINE
-    let mathOperation = new Function('a', 'b', 'c', 'return ' + data.expression);
+    let mathOperation = new Function('a', 'b', 'c', 'return ' + data.calculationFunction);
 
     //-//
 
@@ -50,41 +49,41 @@ function makeCalculator(whichItem)
     for (let x = 0; x < data.amountOfTextBoxes; x++) 
     {
         let textBox = ce("textarea");
-        textBox.id = "box_" + x; 
 
-        // We use the standard anonymous function you are comfortable with!
+        textBox.id = x; 
+
         textBox.onkeyup = function() 
         {
-            // We set default values to zero
-            let a = 0;
-            let b = 0;
-            let c = 0;
+            let a = "";
+            let b = "";
+            let c = "";
 
-            // Explicit, easy-to-read IF statements instead of the ? shorthand!
-            if (ge("box_0"))
-            {
-                a = ge("box_0").value;
+            // We look for the pure number IDs again
+            if (ge(0)) {
+                a = ge(0).value;
             }
-            if (ge("box_1"))
-            {
-                b = ge("box_1").value;
+            if (ge(1)) {
+                b = ge(1).value;
             }
-            if (ge("box_2"))
-            {
-                c = ge("box_2").value;
+            if (ge(2)) {
+                c = ge(2).value;
             }
 
             // run the safe math engine
             let result = mathOperation(a, b, c);
 
-            // print the result cleanly
-            if (isNaN(result) || !isFinite(result))
-            {
-                ge("textBoxResult").value = "";
-            }
-            else
-            {
+            // Dump the result directly into the box 
+            if (ge("textBoxResult")) {
                 ge("textBoxResult").value = result;
+            }
+
+            // Clean up purely mathematical errors
+            if (ge("textBoxResult")) {
+                let currentOutput = ge("textBoxResult").value;
+                if (currentOutput === "NaN" || currentOutput === "Infinity" || currentOutput === "undefined")
+                {
+                    ge("textBoxResult").value = "";
+                }
             }
         };
 
