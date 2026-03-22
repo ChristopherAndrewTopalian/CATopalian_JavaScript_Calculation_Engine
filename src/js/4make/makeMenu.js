@@ -73,7 +73,7 @@ function makeMenu()
     //-//
 
     let menuSubDiv = ce("div");
-    menuSubDiv.style.minWidth = '240px';
+    menuSubDiv.style.maxWidth = '150px';
     menuSubDiv.style.marginLeft = 'auto';
     menuSubDiv.style.marginRight = 'auto';
     menuSubDiv.style.float = 'left';
