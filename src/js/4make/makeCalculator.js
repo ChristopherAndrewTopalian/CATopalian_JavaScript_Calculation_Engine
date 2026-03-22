@@ -15,8 +15,8 @@ function makeCalculator(whichItem)
     // THE MAIN CONTAINER
     let mainDiv = ce("div");
     mainDiv.id = calculatorId;
-    mainDiv.style.position = 'relative';
-    mainDiv.style.left = '250px';
+    //mainDiv.style.position = 'relative';
+    //mainDiv.style.left = '250px';
     mainDiv.style.width = '25vw';
     mainDiv.style.padding = '12px';
     mainDiv.style.border = '2px solid rgb(0, 255, 255)';
@@ -24,7 +24,7 @@ function makeCalculator(whichItem)
     mainDiv.style.display = 'flex';
     mainDiv.style.flexDirection = 'column';
     mainDiv.style.alignItems = 'center';
-    ba(mainDiv);
+    ge('mainContainer').append(mainDiv);
 
     //-//
 
@@ -131,14 +131,14 @@ function makeCalculator(whichItem)
 
     let dataContainer = ce('div');
     dataContainer.id = 'dataContainer';
-    dataContainer.style.position = 'absolute';
-    dataContainer.style.right = '0px';
-    dataContainer.style.bottom = '10px';
+    //dataContainer.style.position = 'absolute';
+    //dataContainer.style.right = '0px';
+    //dataContainer.style.bottom = '10px';
     dataContainer.style.width = '250px';
     dataContainer.style.display = 'flex';
     dataContainer.style.flexDirection = 'column';
     //ge('menuMainDiv').insertAdjacentElement('beforeend', dataContainer);
-    ba(dataContainer);
+    ge('mainContainer').append(dataContainer);
 
     //-//
 

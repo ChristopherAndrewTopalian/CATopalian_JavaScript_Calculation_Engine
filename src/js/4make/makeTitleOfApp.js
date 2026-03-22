@@ -6,7 +6,7 @@ function makeTitleOfApp()
     container.style.width = 50 + 'px';
     container.style.position = 'absolute';
     container.style.right = '50px';
-    container.style.top = '5px';
+    container.style.bottom = '5px';
     ba(container);
 
     //-//

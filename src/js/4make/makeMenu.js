@@ -2,6 +2,14 @@
 
 function makeMenu()
 {
+    let mainContainer = ce('div');
+    mainContainer.id = 'mainContainer';
+    mainContainer.style.display = 'flex';
+    mainContainer.style.flexDirection = 'row';
+    ba(mainContainer);
+
+    //-//
+
     let menuId = 'menuMainDiv';
 
     if (ge(menuId))
@@ -13,13 +21,13 @@ function makeMenu()
 
     let menuMainDiv = ce("div");
     menuMainDiv.id = menuId;
-    menuMainDiv.style.position = 'fixed';
-    menuMainDiv.style.left = '0px';
-    menuMainDiv.style.top = '22px';
+    //menuMainDiv.style.position = 'fixed';
+    //menuMainDiv.style.left = '0px';
+    //menuMainDiv.style.top = '22px';
     menuMainDiv.style.zIndex = 1000;
     menuMainDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
     // ge('mainDiv').append(menuMainDiv);
-    ba(menuMainDiv);
+    mainContainer.append(menuMainDiv);
 
     //-//
 
