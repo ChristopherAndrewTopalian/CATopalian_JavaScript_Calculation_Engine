@@ -6,6 +6,7 @@ function makeMenu()
     mainContainer.id = 'mainContainer';
     mainContainer.style.display = 'flex';
     mainContainer.style.flexDirection = 'row';
+    mainContainer.style.gap = '4px';
     ba(mainContainer);
 
     //-//
