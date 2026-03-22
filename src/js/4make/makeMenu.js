@@ -78,12 +78,11 @@ function makeMenu()
 
     for (let x = 0; x < calculationData.length; x++)
     {
-        let functionButton = ce("button");
-        functionButton.style.alignSelf = 'flex-start';
+        let functionButton = document.createElement("button");
+        functionButton.className = "tactical-btn"; 
         functionButton.textContent = calculationData[x].name;
 
-        functionButton.id = calculationData[x].name;
-
+        // Add our hover sounds
         functionButton.onmouseover = function()
         {
             hoverSound();
@@ -93,21 +92,18 @@ function makeMenu()
         {
             clickSound();
 
-            eval(' '+calculationData[x].calculatorType+' ' + ';');
-
-            console.log(' '+calculationData[x].calculatorType+' ');
+            // we just call the action function directly from the object! 
+            calculationData[x].action(); 
         };
 
         menuSubDiv.append(functionButton);
-
-        ge("menuSubDiv").style.height = 0 + "px";
     }
 }
 
 //----//
 
 // Dedicated to God the Father
-// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025
+// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2026
 // https://github.com/ChristopherTopalian
 // https://github.com/ChristopherAndrewTopalian
 // https://sites.google.com/view/CollegeOfScripting

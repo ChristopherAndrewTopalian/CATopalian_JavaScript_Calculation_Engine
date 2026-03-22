@@ -1,4 +1,4 @@
-:: Topalian_Combine_JS_Files.bat
+:: CATopalian_Combine_JS_Files.bat
 
 @echo off
 :: set the output file name
@@ -18,7 +18,7 @@ echo "JavaScript files combined into %output% successfully."
 ::::
 
 :: Dedicated to God the Father
-:: All Rights Reserved Christopher Andrew Topalian Copyright 2000-2024
+:: All Rights Reserved Christopher Andrew Topalian Copyright 2000-2026
 :: https://github.com/ChristopherTopalian
 :: https://github.com/ChristopherAndrewTopalian
 :: This .bat File Combines All .js files in all folders of our project folder, into one main.js file.
