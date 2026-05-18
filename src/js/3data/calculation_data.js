@@ -691,7 +691,7 @@ let calculationData = [
 
 {
     name: "Calculate Mean Average Of Numbers",
-    formula: "",
+    formula: "(a + b + c + ... + n) / n",
     expression: "",
     calculationFunction: "calculateMeanAverageOfNumbers()",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Mean Average Of Numbers'));",
@@ -708,7 +708,7 @@ let calculationData = [
 
 {
     name: "Calculate Median Average Of Numbers",
-    formula: "",
+    formula: "Sort(a, b, c, ..., n) ➔ Middle Value",
     expression: "",
     calculationFunction: "calculateMedianAverageOfNumbers()",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Median Average Of Numbers'));",
