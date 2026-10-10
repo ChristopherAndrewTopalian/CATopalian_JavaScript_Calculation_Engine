@@ -1,7 +1,5 @@
 // calculation_data.js
 
-// calculation_data.js
-
 let calculationData = [
 {
     name: "Addition",
