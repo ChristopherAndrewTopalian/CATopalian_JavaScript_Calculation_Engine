@@ -1,5 +1,7 @@
 // calculation_data.js
 
+// calculation_data.js
+
 let calculationData = [
 {
     name: "Addition",
@@ -23,7 +25,7 @@ let calculationData = [
     name: "Addition of 3",
     formula: "Sum = a + b + c",
     expression: "parseFloat(a) + parseFloat(b) + parseFloat(c)",
-    calculationFunction: "calculateAddition3(a,b, c)",
+    calculationFunction: "calculateAddition3(a, b, c)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Addition of 3'));",
     action: function()
     {
@@ -251,7 +253,7 @@ let calculationData = [
 {
     name: "Circle Circumference from Area",
     formula: "Circumference = 2 * Square Root PI * area",
-    expression: "2 * (Math.sqrt(Math.PI * a))",
+    expression: "2 * Math.sqrt(Math.PI * a)",
     calculationFunction: "calculateCircleCircumferenceFromArea(a)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Circle Circumference from Area'));",
     action: function()
@@ -267,7 +269,6 @@ let calculationData = [
 
 {
     name: "Distance",
-    // distance = speed * time
     formula: "Distance = (mph * minutes) / 60",
     expression: "(a * b) / 60",
     calculationFunction: "calculateDistance(a, b)",
@@ -286,10 +287,7 @@ let calculationData = [
 
 {
     name: "Speed",
-    // speed = distance / time
-    // feet to miles is feet * 0.000189394
-    // minutes to hours is minutes * 0.166667
-    formula: "Speed = (feet * 0.000189394) / (minutes * 0.166667)",
+    formula: "Speed = (feet * 0.000189394) / (minutes * 0.0166667)",
     expression: "(a * 0.000189394) / (b * 0.0166667)",
     calculationFunction: "calculateSpeed(a, b)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Speed'));",
@@ -307,10 +305,7 @@ let calculationData = [
 
 {
     name: "Time",
-    // time = distance / time
-    // feet to miles is feet * 000189394
-    // mph to mpm is mph * 0.0166667
-    formula: "Time =  (feet * 0.000189394) / (b * 0.0166667)",
+    formula: "Time = (feet * 0.000189394) / (mph * 0.0166667)",
     expression: "(a * 0.000189394) / (b * 0.0166667)",
     calculationFunction: "calculateTime(a, b)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Time'));",
@@ -327,14 +322,14 @@ let calculationData = [
 },
 
 {
-    name: "Recatangle Perimeter",
-    formula: "Perimeter = (2 * a) + (2 * b);",
-    expression: "(2 * a) + (2 * b)",
+    name: "Rectangle Perimeter",
+    formula: "Perimeter = (2 * width) + (2 * length)",
+    expression: "(2 * parseFloat(a)) + (2 * parseFloat(b))",
     calculationFunction: "calculateRectanglePerimeter(a, b)",
-    calculatorType: "makeCalculator(findIndexByName(calculationData, 'Recatangle Perimeter'));",
+    calculatorType: "makeCalculator(findIndexByName(calculationData, 'Rectangle Perimeter'));",
     action: function()
     {
-        makeCalculator(findIndexByName(calculationData, 'Recatangle Perimeter'));
+        makeCalculator(findIndexByName(calculationData, 'Rectangle Perimeter'));
     },
     textBoxOne: "Width",
     textBoxTwo: "Length",
@@ -380,7 +375,7 @@ let calculationData = [
 
 {
     name: "Triangle Isosceles Perimeter",
-    formula: "Perimeter = (2 * a) + b",
+    formula: "Perimeter = (2 * leg) + base",
     expression: "(2 * parseFloat(a)) + parseFloat(b)",
     calculationFunction: "calculateTriangleIsoscelesPerimeter(a, b)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Triangle Isosceles Perimeter'));",
@@ -432,8 +427,8 @@ let calculationData = [
 
 {
     name: "Sphere Volume from Radius",
-    formula: "Volume = (4 / 3 * Math.PI) * Math.pow(radius, 3.0)",
-    expression: "(4 / 3 * Math.PI) * Math.pow(a, 3.0)",
+    formula: "Volume = (4 / 3) * PI * radius^3",
+    expression: "(4 / 3) * Math.PI * Math.pow(a, 3)",
     calculationFunction: "calculateSphereVolumeFromRadius(a)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Sphere Volume from Radius'));",
     action: function()
@@ -466,7 +461,7 @@ let calculationData = [
 
 {
     name: "Fahrenheit to Celsius",
-    formula: "Celsius = 5 * (fahrenheit - 32) / 9;",
+    formula: "Celsius = 5 * (fahrenheit - 32) / 9",
     expression: "5 * (a - 32) / 9",
     calculationFunction: "calculateFahrenheitToCelsius(a)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Fahrenheit to Celsius'));",
@@ -551,7 +546,7 @@ let calculationData = [
 
 {
     name: "Fps to Mph",
-    formula: "Mph = a * 0.681818",
+    formula: "Mph = fps * 0.681818",
     expression: "a * 0.681818",
     calculationFunction: "calculateFpsToMph(a)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Fps to Mph'));",
@@ -619,7 +614,7 @@ let calculationData = [
 
 {
     name: "Percent of Hour",
-    formula: "PercentOfHour = (minute * 100) / 60",
+    formula: "PercentOfHour = (minutes * 100) / 60",
     expression: "(a * 100) / 60",
     calculationFunction: "calculatePercentOfHour(a)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Percent of Hour'));",
@@ -636,8 +631,8 @@ let calculationData = [
 
 {
     name: "Calculate Sales Tax and Total Price",
-    formula: " Sales Tax Amount = price * (taxRate / 100)",
-    expression: "price * (taxRate / 100)",
+    formula: "Total Price = price + (price * (taxRate / 100))",
+    expression: "parseFloat(a) + (parseFloat(a) * (parseFloat(b) / 100))",
     calculationFunction: "calculateSalesTaxAndTotalPrice(a, b)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Sales Tax and Total Price'));",
     action: function()
@@ -645,9 +640,9 @@ let calculationData = [
         makeCalculator(findIndexByName(calculationData, 'Calculate Sales Tax and Total Price'));
     },
     textBoxOne: "Price",
-    textBoxTwo: "Tax Rate",
+    textBoxTwo: "Tax Rate (%)",
     textBoxThree: "Sales Tax Amount",
-    textBoxResult: "Result Sales Tax Included",
+    textBoxResult: "Result Total Price",
     amountOfTextBoxes: 3,
     category: "business",
     type: "money"
@@ -656,8 +651,8 @@ let calculationData = [
 {
     name: "Calculate Year Born From Current Year",
     formula: "YearBorn = CurrentYear - Age",
-    expression: "CurrentYear - a",
-    calculationFunction: "calculateYearBornFromCurrentYear(a)",
+    expression: "b - a",
+    calculationFunction: "calculateYearBornFromCurrentYear(a, b)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Year Born From Current Year'));",
     action: function()
     {
@@ -674,7 +669,7 @@ let calculationData = [
 {
     name: "Calculate Year Born From Specified Year",
     formula: "Year Born = SpecifiedYear - Age",
-    expression: "SpecifiedYear - a",
+    expression: "b - a",
     calculationFunction: "calculateYearBornFromSpecifiedYear(a, b)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Year Born From Specified Year'));",
     action: function()
@@ -691,8 +686,8 @@ let calculationData = [
 
 {
     name: "Calculate Mean Average Of Numbers",
-    formula: "(a + b + c + ... + n) / n",
-    expression: "",
+    formula: "(n1 + n2 + ... + nX) / count",
+    expression: "a.split(',').reduce((sum, val) => sum + parseFloat(val), 0) / a.split(',').length",
     calculationFunction: "calculateMeanAverageOfNumbers()",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Mean Average Of Numbers'));",
     action: function()
@@ -708,8 +703,8 @@ let calculationData = [
 
 {
     name: "Calculate Median Average Of Numbers",
-    formula: "Sort(a, b, c, ..., n) ➔ Middle Value",
-    expression: "",
+    formula: "Sort list, find middle value",
+    expression: "(() => { let arr = a.split(',').map(Number).sort((x, y) => x - y); let mid = Math.floor(arr.length / 2); return arr.length % 2 !== 0 ? arr[mid] : (arr[mid - 1] + arr[mid]) / 2; })()",
     calculationFunction: "calculateMedianAverageOfNumbers()",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Median Average Of Numbers'));",
     action: function()
@@ -725,8 +720,8 @@ let calculationData = [
 
 {
     name: "Calculate Feet and Inch to Meter",
-    formula: "",
-    expression: "",
+    formula: "Meters = (feet * 0.3048) + (inches * 0.0254)",
+    expression: "(parseFloat(a) * 0.3048) + (parseFloat(b) * 0.0254)",
     calculationFunction: "calculateFeetAndInchToMeter(a, b)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Feet and Inch to Meter'));",
     action: function()
@@ -743,8 +738,8 @@ let calculationData = [
 
 {
     name: "Calculate Meter and Centimeter to Feet",
-    formula: "",
-    expression: "",
+    formula: "Feet = (meters * 3.28084) + (centimeters * 0.0328084)",
+    expression: "(parseFloat(a) * 3.28084) + (parseFloat(b) * 0.0328084)",
     calculationFunction: "calculateMeterAndCentimeterToFeet(a, b)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Meter and Centimeter to Feet'));",
     action: function()
@@ -761,8 +756,8 @@ let calculationData = [
 
 {
     name: "Calculate Meter to Mile",
-    formula: "",
-    expression: "",
+    formula: "Mile = meter * 0.000621371",
+    expression: "a * 0.000621371",
     calculationFunction: "calculateMeterToMile(a)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Meter to Mile'));",
     action: function()
@@ -778,8 +773,8 @@ let calculationData = [
 
 {
     name: "Calculate Mile to Meter",
-    formula: "",
-    expression: "",
+    formula: "Meter = mile * 1609.34",
+    expression: "a * 1609.34",
     calculationFunction: "calculateMileToMeter(a)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Mile to Meter'));",
     action: function()
@@ -795,16 +790,16 @@ let calculationData = [
 
 {
     name: "Calculate Difference Between Dates",
-    formula: "",
-    expression: "",
+    formula: "Days = Math.abs(Date1 - Date2) / (1000 * 60 * 60 * 24)",
+    expression: "Math.abs(new Date(a) - new Date(b)) / (1000 * 60 * 60 * 24)",
     calculationFunction: "calculateDifferenceBetweenDates(a, b)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Difference Between Dates'));",
     action: function()
     {
         makeCalculator(findIndexByName(calculationData, 'Calculate Difference Between Dates'));
     },
-    textBoxOne: "Date 1",
-    textBoxTwo: "Date 2",
+    textBoxOne: "Date 1 (YYYY-MM-DD)",
+    textBoxTwo: "Date 2 (YYYY-MM-DD)",
     textBoxResult: "Result Days",
     amountOfTextBoxes: 2,
     category: "time",
@@ -813,8 +808,8 @@ let calculationData = [
 
 {
     name: "Calculate Number of Days in February",
-    formula: "",
-    expression: "",
+    formula: "Days = isLeapYear ? 29 : 28",
+    expression: "(a % 4 === 0 && (a % 100 !== 0 || a % 400 === 0)) ? 29 : 28",
     calculationFunction: "calculateNumberOfDaysInFebruary(a)",
     calculatorType: "makeCalculator(findIndexByName(calculationData, 'Calculate Number of Days in February'));",
     action: function()
@@ -827,7 +822,6 @@ let calculationData = [
     category: "time",
     type: "date"
 }
-
 ];
 
 //----//
