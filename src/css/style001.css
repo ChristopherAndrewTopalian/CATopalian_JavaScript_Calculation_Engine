@@ -123,6 +123,35 @@ button:active
     color: rgb(0, 255, 255);
 }
 
+/* Hide the default HTML triangle */
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* The Closed State Icon */
+details > summary::before {
+    content: '⊞'; /* Removed the trailing space inside the quotes */
+    color: rgb(0, 255, 150);
+    font-family: monospace;
+    display: inline-block;
+    margin-right: 6px; /* <-- Gives you exact, tight pixel control */
+    transition: color 0.2s;
+}
+
+/* The Open State Icon */
+details[open] > summary::before {
+    content: '⊟'; /* Removed the trailing space */
+    color: rgb(255, 100, 100); 
+}
+
+/* Optional hover glow effect */
+details > summary:hover::before {
+    text-shadow: 0px 0px 8px currentColor;
+}
+
 /* Dedicated to God the Father */
 /* All Rights Reserved Christopher Topalian Copyright 2000-2026 */
 /* https://github.com/ChristopherTopalian */

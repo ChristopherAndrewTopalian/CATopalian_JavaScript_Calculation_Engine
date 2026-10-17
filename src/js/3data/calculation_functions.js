@@ -283,7 +283,7 @@ function calculateYearBornFromCurrentYear(a)
 
     let currentYear = new Date().getFullYear();
 
-    ge(1).textContent = currentYear;
+    ge(1).value = currentYear;
 
     let yearBorn = currentYear - age;
 
@@ -340,6 +340,8 @@ function calculateMedianAverageOfNumbers()
 
     // find the median of floatNumbersArray
     let median = Math.floor(floatNumbersArray.length / 2);
+
+    let result;
 
     if (floatNumbersArray.length % 2)
     {

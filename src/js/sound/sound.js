@@ -62,7 +62,7 @@ function hoverSound()
         100,     // frequency
         100,     // duration
         'sine',  // waveType
-        0.03,    // volume
+        0.02,    // volume
         0,       // detune
         0.01,      // attackTime
         0.01,      // releaseTime

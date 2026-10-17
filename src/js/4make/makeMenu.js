@@ -107,6 +107,101 @@ function makeMenu()
 
         menuSubDiv.append(functionButton);
     }
+
+    //-//
+
+    //-// Right Panel Setup
+
+    let rightPanel = ce('div');
+    rightPanel.style.position = 'absolute';
+    rightPanel.style.right = '0px';
+    rightPanel.style.top = '0px';
+    rightPanel.style.width = '120px'; // Widened slightly to fit details arrow
+    rightPanel.style.height = '100%';
+    rightPanel.style.overflowY = 'scroll';
+    rightPanel.style.backgroundColor = 'rgba(0, 0, 0, 0.4)'; // Matching menu theme
+    rightPanel.style.padding = '5px';
+    ba(rightPanel);
+
+    let rightContainer = ce('div');
+    rightContainer.style.position = 'relative';
+    rightContainer.style.display = 'flex';
+    rightContainer.style.flexDirection = 'column';
+    rightContainer.style.gap = '8px';
+    rightPanel.append(rightContainer);
+
+    calculationData.sort((a, b) => a.name.localeCompare(b.name));
+
+    // Group data by category dynamically
+    let categories = {};
+    
+    for (let x = 0; x < calculationData.length; x++)
+    {
+        let item = calculationData[x];
+        let cat = item.category;
+        
+        // If this category doesn't exist in our object yet, create an empty array for it
+        if (!categories[cat])
+        {
+            categories[cat] = [];
+        }
+        
+        // Push the current item into its matching category array
+        categories[cat].push(item);
+    }
+
+    // Generate the Details/Summary UI for each category
+    for (let catName in categories)
+    {
+        let categoryDetails = ce('details');
+        categoryDetails.style.color = 'white';
+        // categoryDetails.open = true; // Uncomment if you want them open by default
+
+        let categorySummary = ce('summary');
+        // Capitalize the first letter of the category name
+        categorySummary.textContent = catName.charAt(0).toUpperCase() + catName.slice(1);
+        categorySummary.style.cursor = 'pointer';
+        categorySummary.style.fontWeight = 'bold';
+        categorySummary.style.marginBottom = '4px';
+        categorySummary.style.fontSize = '12px';
+        categoryDetails.append(categorySummary);
+
+        let buttonContainer = ce('div');
+        buttonContainer.style.display = 'flex';
+        buttonContainer.style.flexDirection = 'column';
+        buttonContainer.style.gap = '2px';
+        buttonContainer.style.paddingLeft = '10px'; // Indent buttons slightly
+        categoryDetails.append(buttonContainer);
+
+        // Loop through the items inside this specific category
+        let itemsInCategory = categories[catName];
+        
+        for (let i = 0; i < itemsInCategory.length; i++)
+        {
+            let currentItem = itemsInCategory[i];
+            
+            let theButton = ce('button');
+            theButton.className = "tactical-btn";
+            theButton.textContent = currentItem.name;
+            theButton.style.width = '100%';
+            theButton.style.textAlign = 'left';
+            
+            theButton.onmouseover = function()
+            {
+                hoverSound();
+            };
+            
+            theButton.onclick = function()
+            {
+                clickSound();
+                currentItem.action(); // Calls the function directly
+            };
+            
+            buttonContainer.append(theButton);
+        }
+
+        rightContainer.append(categoryDetails);
+    }
 }
 
 //----//
